@@ -49,7 +49,7 @@ export const playBgm = (path = 'assets/audio/music/background_music.mp3', volume
         // Create new BGM
         currentBgm = new Howl({
             src: [path],
-            html5: true, // Use HTML5 Audio for BGM (better for long files/streaming)
+            html5: false, // Small file (480KB), Web Audio is more reliable
             loop: true,
             volume: volume,
             preload: true,
