@@ -17,8 +17,8 @@ const SyncTutorialModal = ({ isOpen, onClose, language = 'zh-TW' }) => {
                         <h3>{language === 'zh-TW' ? '第一步：在舊裝置產生代碼' : 'Step 1: Generate ID on Old Device'}</h3>
                         <p style={{ color: '#666', lineHeight: '1.6' }}>
                             {language === 'zh-TW'
-                                ? '在您的舊手機或電腦點擊「啟動雲端同步」，系統會給您一組像是 ZORA-A1B2 的「同步碼」。'
-                                : 'Click "Enable Cloud Sync" on your old device to get a "Sync ID" like ZORA-A1B2.'}
+                                ? '在您的舊手機或電腦點擊「啟動雲端同步」，系統會給您一組像是 ABCD-A1B2 的「同步碼」。'
+                                : 'Click "Enable Cloud Sync" on your old device to get a "Sync ID" like ABCD-A1B2.'}
                         </p>
                     </div>
                 );
