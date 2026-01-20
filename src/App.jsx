@@ -206,6 +206,36 @@ function App() {
     }
   }, [levelProgress, unlockedMilestones, unlockLevel, scene]);
 
+  // Startup Cloud Fetch
+  useEffect(() => {
+    if (syncId && REMOTE_VERSION_URL) {
+      console.log("Cloud sync: Checking for remote updates on startup...");
+      fetch(`${REMOTE_VERSION_URL}?action=load_progress&syncId=${syncId}`)
+        .then(res => res.json())
+        .then(data => {
+          if (data.status === 'success') {
+            const cloudProgress = JSON.parse(data.progress || '{}');
+            const cloudMilestones = JSON.parse(data.milestones || '[]');
+            if (data.checksum === getChecksum(cloudProgress)) {
+              // Check if cloud is actually ahead
+              const localStars = Object.values(levelProgress).reduce((a, b) => a + b, 0);
+              const cloudStars = Object.values(cloudProgress).reduce((a, b) => a + b, 0);
+
+              if (cloudStars > localStars || Object.keys(cloudProgress).length > Object.keys(levelProgress).length) {
+                console.log("Cloud sync: Remote progress is ahead. Updating local state.");
+                setLevelProgress(cloudProgress);
+                setUnlockedMilestones(cloudMilestones);
+                setLastSyncTime(new Date());
+              } else {
+                console.log("Cloud sync: Local progress is up-to-date.");
+              }
+            }
+          }
+        })
+        .catch(err => console.warn("Startup cloud sync failed:", err));
+    }
+  }, []); // Run once on startup
+
   useEffect(() => {
     const storedVersion = localStorage.getItem('app_version');
     if (storedVersion !== APP_VERSION) {

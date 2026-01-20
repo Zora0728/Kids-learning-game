@@ -3,6 +3,7 @@ import '../App.css';
 import { TEXT } from '../utils/i18n';
 import FeedbackModal from './FeedbackModal';
 import { toggleBgm, playSfx, SFX } from '../utils/sfx';
+import SyncTutorialModal from './SyncTutorialModal';
 
 const PlayerProfileModal = ({
     isOpen,
@@ -31,6 +32,7 @@ const PlayerProfileModal = ({
     // State for Cloud Sync input
     const [cloudInputId, setCloudInputId] = useState('');
     const [syncStatus, setSyncStatus] = useState(null); // { type: 'success'|'error', msg: '' }
+    const [isTutorialOpen, setIsTutorialOpen] = useState(false);
 
     // State for settings (to force re-render)
     const [bgmEnabled, setBgmEnabled] = useState(() => localStorage.getItem('game_bgm_enabled') !== 'false');
@@ -223,8 +225,19 @@ const PlayerProfileModal = ({
 
                         {/* Cloud Sync Section */}
                         <div style={{ marginTop: '20px', borderTop: '2px solid #ecf0f1', paddingTop: '20px', textAlign: 'left' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '1.1rem', color: '#666', fontWeight: 'bold', marginBottom: '15px' }}>
-                                <span>☁️</span> <span>{currentLanguage === 'zh-TW' ? "雲端同步 (跨裝置)" : "Cloud Sync (Cross-Device)"}</span>
+                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '15px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '1.1rem', color: '#666', fontWeight: 'bold' }}>
+                                    <span>☁️</span> <span>{currentLanguage === 'zh-TW' ? "雲端同步" : "Cloud Sync"}</span>
+                                </div>
+                                <button
+                                    onClick={() => setIsTutorialOpen(true)}
+                                    style={{
+                                        background: '#3498db', color: 'white', border: 'none', borderRadius: '50%',
+                                        width: '24px', height: '24px', fontSize: '0.8rem', cursor: 'pointer',
+                                        display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold'
+                                    }}>
+                                    ?
+                                </button>
                             </div>
 
                             {syncId ? (
@@ -414,6 +427,11 @@ const PlayerProfileModal = ({
                 isOpen={isFeedbackOpen}
                 onClose={() => setIsFeedbackOpen(false)}
                 currentLanguage={currentLanguage}
+            />
+            <SyncTutorialModal
+                isOpen={isTutorialOpen}
+                onClose={() => setIsTutorialOpen(false)}
+                language={currentLanguage}
             />
         </div>
     );
