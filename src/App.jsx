@@ -426,15 +426,15 @@ function App() {
         totalStars={Object.values(levelProgress).reduce((a, b) => a + b, 0)}
         avatar={(() => {
           const stars = Object.values(levelProgress).reduce((a, b) => a + b, 0);
-          if (levelProgress[29] > 0) return '/assets/sprites/title_rank_7.png'; // God
+          if (levelProgress[29] > 0) return 'assets/sprites/title_rank_7.png'; // God
           const mainLevels = Array.from({ length: 28 }, (_, i) => i + 1);
           const isPerfect = mainLevels.every(lvl => levelProgress[lvl] === 3);
-          if (isPerfect) return '/assets/sprites/title_rank_6.png'; // Perfect
-          if (stars >= 55) return '/assets/sprites/title_rank_5.png'; // Dragon
-          if (stars >= 40) return '/assets/sprites/title_rank_4.png'; // Wizard
-          if (stars >= 25) return '/assets/sprites/title_rank_3.png'; // Knight
-          if (stars >= 10) return '/assets/sprites/title_rank_2.png'; // Adventurer
-          return '/assets/sprites/title_rank_1.png'; // Apprentice (Default)
+          if (isPerfect) return 'assets/sprites/title_rank_6.png'; // Perfect
+          if (stars >= 55) return 'assets/sprites/title_rank_5.png'; // Dragon
+          if (stars >= 40) return 'assets/sprites/title_rank_4.png'; // Wizard
+          if (stars >= 25) return 'assets/sprites/title_rank_3.png'; // Knight
+          if (stars >= 10) return 'assets/sprites/title_rank_2.png'; // Adventurer
+          return 'assets/sprites/title_rank_1.png'; // Apprentice (Default)
         })()}
         currentTitle={(() => {
           const t = TEXT[language] || TEXT['zh-TW'];

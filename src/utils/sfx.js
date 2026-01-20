@@ -3,15 +3,15 @@ const { Howl, Howler } = howler;
 
 // Sound Effects Map
 export const SFX = {
-    CELEBRATION: '/assets/audio/sfx/celebration.mp3', // Win Level
-    EARN_TITLE: '/assets/audio/sfx/star_ping.mp3',  // Unlock Title
-    LEVEL_UP: '/assets/audio/sfx/upgrade.mp3',      // Level Up? Or Star Increase
-    SP_UNLOCK: '/assets/audio/sfx/victory.wav',     // Unlock SP/BOSS (Big Victory)
-    DRAG: '/assets/audio/sfx/drag.mp3',      // Dragging
-    OPEN_SETTINGS: '/assets/audio/sfx/open_set.mp3', // Open Profile/Settings
-    INSTRUCTION: '/assets/audio/sfx/notification.mp3',  // Modal Open
-    CLICK: '/assets/audio/sfx/click.mp3',          // Generic Click
-    ERROR: '/assets/audio/sfx/error.mp3'      // Error / Wrong
+    CELEBRATION: 'assets/audio/sfx/celebration.mp3', // Win Level
+    EARN_TITLE: 'assets/audio/sfx/star_ping.mp3',  // Unlock Title
+    LEVEL_UP: 'assets/audio/sfx/upgrade.mp3',      // Level Up? Or Star Increase
+    SP_UNLOCK: 'assets/audio/sfx/victory.wav',     // Unlock SP/BOSS (Big Victory)
+    DRAG: 'assets/audio/sfx/drag.mp3',      // Dragging
+    OPEN_SETTINGS: 'assets/audio/sfx/open_set.mp3', // Open Profile/Settings
+    INSTRUCTION: 'assets/audio/sfx/notification.mp3',  // Modal Open
+    CLICK: 'assets/audio/sfx/click.mp3',          // Generic Click
+    ERROR: 'assets/audio/sfx/error.mp3'      // Error / Wrong
 };
 
 // Global BGM Instance
@@ -19,7 +19,7 @@ let currentBgm = null;
 let currentBgmPath = null;
 
 // Helper to initialize BGM
-export const playBgm = (path = '/assets/audio/music/background_music.mp3', volume = 0.3) => {
+export const playBgm = (path = 'assets/audio/music/background_music.mp3', volume = 0.3) => {
     try {
         const enabled = localStorage.getItem('game_bgm_enabled');
         if (enabled === 'false') {

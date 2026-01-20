@@ -11,7 +11,7 @@ const MainMenu = ({ onStart, onSettings, onRewards, onReset, language = 'zh-TW',
 
       {/* Character Circle */}
       <div className="character-circle">
-        <img src="/assets/app_icon_transparent.png" alt="Hero" className="hero-avatar" />
+        <img src="assets/app_icon_transparent.png" alt="Hero" className="hero-avatar" />
       </div>
 
       {/* Button Stack */}

@@ -24,7 +24,7 @@ const SplashScreen = ({ onFinish }) => {
     return (
         <div className={`splash-screen ${fadingOut ? 'fade-out' : ''}`} style={{ backgroundColor: '#1e1e2e' }}>
             <div className="logo-container">
-                <img src="/assets/zora_city_logo02.png" alt="Zora City Logo" className="splash-logo" />
+                <img src="assets/zora_city_logo02.png" alt="Zora City Logo" className="splash-logo" />
                 <h1 className="splash-title">Level Up!</h1>
                 <div className="loading-bar">
                     <div className="loading-progress"></div>

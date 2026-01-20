@@ -11,7 +11,7 @@ const CharacterUnlockOverlay = ({ level, onContinue, onChallenge }) => {
             title: t('ms_5_title'),
             role: t('title_adventurer'),
             desc: t('ms_5_desc'),
-            sprite: "/assets/sprites/title_rank_2.png",
+            sprite: "assets/sprites/title_rank_2.png",
             color: "#4ECDC4",
             reward: t('ms_5_reward')
         },
@@ -19,7 +19,7 @@ const CharacterUnlockOverlay = ({ level, onContinue, onChallenge }) => {
             title: t('ms_10_title'),
             role: t('title_knight'),
             desc: t('ms_10_desc'),
-            sprite: "/assets/sprites/title_rank_3.png",
+            sprite: "assets/sprites/title_rank_3.png",
             color: "#A29BFE",
             reward: t('ms_10_reward')
         },
@@ -27,7 +27,7 @@ const CharacterUnlockOverlay = ({ level, onContinue, onChallenge }) => {
             title: t('ms_15_title'),
             role: t('title_wizard'),
             desc: t('ms_15_desc'),
-            sprite: "/assets/sprites/title_rank_4.png",
+            sprite: "assets/sprites/title_rank_4.png",
             color: "#FF6B6B",
             reward: t('ms_15_reward')
         },
@@ -35,7 +35,7 @@ const CharacterUnlockOverlay = ({ level, onContinue, onChallenge }) => {
             title: t('ms_20_title'),
             role: t('title_dragon_hero'),
             desc: t('ms_20_desc'),
-            sprite: "/assets/sprites/title_rank_5.png",
+            sprite: "assets/sprites/title_rank_5.png",
             color: "#FF4757",
             reward: t('ms_20_reward')
         },
@@ -44,7 +44,7 @@ const CharacterUnlockOverlay = ({ level, onContinue, onChallenge }) => {
             title: t('ms_S1_title'),
             role: t('ls1_title'),
             desc: t('ms_S1_desc'),
-            sprite: "/assets/game_Hidden levels.png",
+            sprite: "assets/game_Hidden levels.png",
             color: "#E056FD",
             reward: t('ms_S1_reward')
         },
@@ -52,7 +52,7 @@ const CharacterUnlockOverlay = ({ level, onContinue, onChallenge }) => {
             title: t('ms_S2_title'),
             role: t('ls2_title'),
             desc: t('ms_S2_desc'),
-            sprite: "/assets/game_Hidden levels.png",
+            sprite: "assets/game_Hidden levels.png",
             color: "#FF4081",
             reward: t('ms_S2_reward')
         },
@@ -60,7 +60,7 @@ const CharacterUnlockOverlay = ({ level, onContinue, onChallenge }) => {
             title: t('ms_S3_title'),
             role: "Challenge III",
             desc: t('ms_S3_desc'),
-            sprite: "/assets/game_Hidden levels.png",
+            sprite: "assets/game_Hidden levels.png",
             color: "#2979FF",
             reward: t('ms_S3_reward')
         },
@@ -68,7 +68,7 @@ const CharacterUnlockOverlay = ({ level, onContinue, onChallenge }) => {
             title: t('ms_perfect_title'),
             role: t('title_perfect_warrior'),
             desc: t('ms_perfect_desc'),
-            sprite: "/assets/sprites/title_rank_6.png",
+            sprite: "assets/sprites/title_rank_6.png",
             color: "#FFD700",
             reward: t('ms_perfect_reward')
         },
@@ -76,7 +76,7 @@ const CharacterUnlockOverlay = ({ level, onContinue, onChallenge }) => {
             title: t('ms_god_title'),
             role: t('title_god_domain'),
             desc: t('ms_god_desc'),
-            sprite: "/assets/sprites/title_rank_7.png",
+            sprite: "assets/sprites/title_rank_7.png",
             color: "#6200EA",
             reward: t('ms_god_reward')
         }
