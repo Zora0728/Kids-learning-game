@@ -23,7 +23,7 @@ const ResetConfirmationModal = ({ onConfirm, onCancel }) => {
                     animation: 'float 3s ease-in-out infinite'
                 }}>
                     <img
-                        src="/assets/sprites/crying_bunny.png"
+                        src="assets/sprites/crying_bunny.png"
                         alt="Sad Bunny"
                         style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                     />

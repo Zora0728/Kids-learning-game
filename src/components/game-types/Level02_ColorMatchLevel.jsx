@@ -240,7 +240,7 @@ const ColorMatchLevel = ({ levelNumber, onComplete, onBack, language = 'zh-TW' }
                         background: 'white', padding: '30px', borderRadius: '20px', textAlign: 'center',
                         boxShadow: '0 10px 25px rgba(0,0,0,0.2)', width: '80%', maxWidth: '280px', border: '4px solid #f0f0f0'
                     }}>
-                        <img src="/assets/game_fail.png" style={{ width: '80px', height: '80px', marginBottom: '10px' }} alt="Failed" />
+                        <img src="assets/game_fail.png" style={{ width: '80px', height: '80px', marginBottom: '10px' }} alt="Failed" />
                         <h2 style={{ fontSize: '2rem', margin: '10px 0' }}>{t.fail_title}</h2>
                         <p style={{ fontSize: '1rem' }}>
                             {t.game_mistakes.replace('{count}', mistakes)}<br />

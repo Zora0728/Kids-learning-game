@@ -41,11 +41,11 @@ const PlayerProfileModal = ({
     // Titles Configuration
     // Condition: function receiving (progress, maxLevel) -> boolean
     const TITLES = [
-        { id: 't1', name: t.title_apprentice, desc: currentLanguage === 'zh-TW' ? "開始冒險" : "Start Adventure", condition: () => true, sprite: '/assets/sprites/title_rank_1.png' }, // Apprentice (Empty)
-        { id: 't2', name: t.title_adventurer, desc: currentLanguage === 'zh-TW' ? "獲得 10 顆星星" : "Collect 10 Stars", condition: (p, m, s) => s >= 10, sprite: '/assets/sprites/title_rank_2.png' }, // Adventurer (Sword)
-        { id: 't3', name: t.title_knight, desc: currentLanguage === 'zh-TW' ? "獲得 25 顆星星" : "Collect 25 Stars", condition: (p, m, s) => s >= 25, sprite: '/assets/sprites/title_rank_3.png' }, // Knight
-        { id: 't4', name: t.title_wizard, desc: currentLanguage === 'zh-TW' ? "獲得 40 顆星星" : "Collect 40 Stars", condition: (p, m, s) => s >= 40, sprite: '/assets/sprites/title_rank_4.png' }, // Wizard
-        { id: 't5', name: t.title_dragon_hero, desc: currentLanguage === 'zh-TW' ? "獲得 55 顆星星" : "Collect 55 Stars", condition: (p, m, s) => s >= 55, sprite: '/assets/sprites/title_rank_5.png' }, // Dragon
+        { id: 't1', name: t.title_apprentice, desc: currentLanguage === 'zh-TW' ? "開始冒險" : "Start Adventure", condition: () => true, sprite: 'assets/sprites/title_rank_1.png' }, // Apprentice (Empty)
+        { id: 't2', name: t.title_adventurer, desc: currentLanguage === 'zh-TW' ? "獲得 10 顆星星" : "Collect 10 Stars", condition: (p, m, s) => s >= 10, sprite: 'assets/sprites/title_rank_2.png' }, // Adventurer (Sword)
+        { id: 't3', name: t.title_knight, desc: currentLanguage === 'zh-TW' ? "獲得 25 顆星星" : "Collect 25 Stars", condition: (p, m, s) => s >= 25, sprite: 'assets/sprites/title_rank_3.png' }, // Knight
+        { id: 't4', name: t.title_wizard, desc: currentLanguage === 'zh-TW' ? "獲得 40 顆星星" : "Collect 40 Stars", condition: (p, m, s) => s >= 40, sprite: 'assets/sprites/title_rank_4.png' }, // Wizard
+        { id: 't5', name: t.title_dragon_hero, desc: currentLanguage === 'zh-TW' ? "獲得 55 顆星星" : "Collect 55 Stars", condition: (p, m, s) => s >= 55, sprite: 'assets/sprites/title_rank_5.png' }, // Dragon
         {
             id: 't_perfect',
             name: t.title_perfect_warrior,
@@ -55,14 +55,14 @@ const PlayerProfileModal = ({
                 const mainLevels = Array.from({ length: 28 }, (_, i) => i + 1);
                 return mainLevels.every(lvl => p[lvl] === 3);
             },
-            sprite: '/assets/sprites/title_rank_6.png' // Perfect
+            sprite: 'assets/sprites/title_rank_6.png' // Perfect
         },
         {
             id: 't_god',
             name: t.title_god_domain,
             desc: currentLanguage === 'zh-TW' ? "通過傳說中的 BOSS 關卡" : "Complete the Boss Level",
             condition: (p) => !!p[29], // Level 29 completed
-            sprite: '/assets/sprites/title_rank_7.png' // God
+            sprite: 'assets/sprites/title_rank_7.png' // God
         }
     ];
 

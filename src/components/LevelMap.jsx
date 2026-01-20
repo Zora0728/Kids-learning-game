@@ -68,21 +68,21 @@ const LevelMap = ({ progress, onSelectLevel, onBack, onUnlockAll, onResetProgres
   // Determine Avatar based on Stars (Thresholds: 10, 25, 40, 55)
   // Determine Avatar based on Stars (Thresholds: 10, 25, 40, 55)
   // Use Sprites
-  let AvatarIcon = '/assets/sprites/title_rank_1.png'; // Default
+  let AvatarIcon = 'assets/sprites/title_rank_1.png'; // Default
   const t = TEXT[language] || TEXT['zh-TW'];
   let Title = t.title_apprentice;
 
   // Check Titles
-  if (progress[29] > 0) { AvatarIcon = '/assets/sprites/title_rank_7.png'; Title = t.title_god_domain; }
+  if (progress[29] > 0) { AvatarIcon = 'assets/sprites/title_rank_7.png'; Title = t.title_god_domain; }
   else {
     // Perfect Warrior Check
     const mainLevels = Array.from({ length: 28 }, (_, i) => i + 1);
     const isPerfect = mainLevels.every(lvl => progress[lvl] === 3);
-    if (isPerfect) { AvatarIcon = '/assets/sprites/title_rank_6.png'; Title = t.title_perfect_warrior; }
-    else if (totalStars >= 55) { AvatarIcon = '/assets/sprites/title_rank_5.png'; Title = t.title_dragon_hero; }
-    else if (totalStars >= 40) { AvatarIcon = '/assets/sprites/title_rank_4.png'; Title = t.title_wizard; }
-    else if (totalStars >= 25) { AvatarIcon = '/assets/sprites/title_rank_3.png'; Title = t.title_knight; }
-    else if (totalStars >= 10) { AvatarIcon = '/assets/sprites/title_rank_2.png'; Title = t.title_adventurer; }
+    if (isPerfect) { AvatarIcon = 'assets/sprites/title_rank_6.png'; Title = t.title_perfect_warrior; }
+    else if (totalStars >= 55) { AvatarIcon = 'assets/sprites/title_rank_5.png'; Title = t.title_dragon_hero; }
+    else if (totalStars >= 40) { AvatarIcon = 'assets/sprites/title_rank_4.png'; Title = t.title_wizard; }
+    else if (totalStars >= 25) { AvatarIcon = 'assets/sprites/title_rank_3.png'; Title = t.title_knight; }
+    else if (totalStars >= 10) { AvatarIcon = 'assets/sprites/title_rank_2.png'; Title = t.title_adventurer; }
   }
 
   // Check "God's Domain" override for title display? Or just keep based on stars?

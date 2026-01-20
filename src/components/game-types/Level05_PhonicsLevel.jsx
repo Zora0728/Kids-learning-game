@@ -239,7 +239,7 @@ const PhonicsLevel = ({ levelNumber, onComplete, onBack, language = 'zh-TW' }) =
                         display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 100
                     }}>
                         <div className="fail-card" style={{ background: 'white', padding: '30px', borderRadius: '20px', textAlign: 'center' }}>
-                            <img src="/assets/game_fail.png" style={{ width: '80px', height: '80px', marginBottom: '10px' }} alt="Failed" />
+                            <img src="assets/game_fail.png" style={{ width: '80px', height: '80px', marginBottom: '10px' }} alt="Failed" />
                             <h2 style={{ fontSize: '2rem', margin: '10px 0' }}>{t.fail_title}</h2>
                             <p>{t.fail_retry_prompt}</p>
                             <button className="btn-success" onClick={() => window.location.reload()}>{t.game_retry}</button>

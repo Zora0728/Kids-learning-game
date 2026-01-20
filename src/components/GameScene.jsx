@@ -135,7 +135,7 @@ const GameScene = ({ config, level, onBack, onNextLevel, onLevelComplete, langua
     };
 
     const bgImage = config?.background
-        ? `linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('/assets/${config.background}')`
+        ? `linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('assets/${config.background}')`
         : 'linear-gradient(to bottom, #87CEEB, #E0F7FA)'; // Default Sky
 
     return (
@@ -178,7 +178,7 @@ const GameScene = ({ config, level, onBack, onNextLevel, onLevelComplete, langua
                     background: 'rgba(255,255,255,0.9)', display: 'flex', flexDirection: 'column',
                     justifyContent: 'center', alignItems: 'center', zIndex: 50
                 }}>
-                    <img src="/assets/game_icon.png" className="loading-icon" alt="Loading" style={{
+                    <img src="assets/game_icon.png" className="loading-icon" alt="Loading" style={{
                         width: '120px', animation: 'bounce 0.8s infinite alternate'
                     }} />
                     <h2 style={{ marginTop: '20px', color: '#555' }}>{t.game_loading}</h2>
