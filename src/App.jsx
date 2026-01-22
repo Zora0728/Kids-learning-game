@@ -16,10 +16,10 @@ import { Capacitor } from '@capacitor/core';
 
 const APP_VERSION = '1.2.9'; // Update this when releasing new versions
 const DOWNLOAD_URL = 'https://drive.google.com/file/d/1kbZNX10NL_x6IiG2qMLIfIodK_WpTWFU/view?usp=drive_link';
-const REMOTE_VERSION_URL = 'https://script.google.com/macros/s/AKfycbyrZsg79FydTH3otRORgIRsFYWi_ZM2SGDU41gJv3-BXPlfzCZzDogBL-Q3pc2fyHa9ZA/exec'; // 填入您的 GAS 部署網址
+const REMOTE_VERSION_URL = import.meta.env.VITE_GAS_URL; // 填入您的 GAS 部署網址
 
 // --- Security Helpers ---
-const SECURITY_SALT = 'zora_city_secret_2025'; // A secret key to prevent casual tampering
+const SECURITY_SALT = import.meta.env.VITE_SECURITY_SALT; // A secret key to prevent casual tampering
 
 // Simple hash function for checksum
 const getChecksum = (data) => {

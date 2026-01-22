@@ -27,6 +27,9 @@ jobs:
         run: |
           npm install
           npm run build
+        env:
+          VITE_GAS_URL: ${{ secrets.VITE_GAS_URL }}
+          VITE_SECURITY_SALT: ${{ secrets.VITE_SECURITY_SALT }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
