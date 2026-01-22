@@ -14,7 +14,7 @@ import i18n from './utils/i18n';
 import VersionUpdateModal from './components/VersionUpdateModal';
 import { Capacitor } from '@capacitor/core';
 
-const APP_VERSION = '1.2.9'; // Update this when releasing new versions
+const APP_VERSION = '1.2.10'; // Update this when releasing new versions
 const DOWNLOAD_URL = 'https://drive.google.com/file/d/1kbZNX10NL_x6IiG2qMLIfIodK_WpTWFU/view?usp=drive_link';
 const REMOTE_VERSION_URL = import.meta.env.VITE_GAS_URL; // 填入您的 GAS 部署網址
 
